@@ -24,13 +24,19 @@ public class LegacyDrop : MonoBehaviour
 
 	void Update(){
 		if(mode == 1){
+			if(Input.GetKeyDown(KeyCode.Backspace)){
+				st = st.Remove(st.Length - 1, 1);
+				toggled.transform.GetChild(2).GetComponent<Text>().text = st;
+ 			}
 			for (int i = 0; i <= 27; i++){
 				if (Input.GetKeyDown(KeyCode.A + i)){
 					char cs = (char) (((byte) i) + 'A');
 					st += cs;
+					toggled.transform.GetChild(2).GetComponent<Text>().text = st;
+					return;
 				}
 			}
-			if(Input.GetKeyDown(KeyCode.Return)){
+			if(Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0)){
 				mode = 0;
 				toggled.transform.GetChild(2).GetComponent<Text>().text = st;
 				st = "";

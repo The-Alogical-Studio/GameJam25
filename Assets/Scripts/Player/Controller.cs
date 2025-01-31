@@ -9,6 +9,9 @@ public class Controller : MonoBehaviour
 	[SerializeField] private float velocity = 1f;
 	[SerializeField] private float sens = 100f;
 	[SerializeField] private float jf;
+	[SerializeField] private GameObject sound;
+	[SerializeField] private AudioSource jump;
+	[SerializeField] private byte FLAGS;
 
 	private float ry;
 	private float rx;
@@ -23,9 +26,17 @@ public class Controller : MonoBehaviour
 		rx -= Input.GetAxis("Mouse Y") * sens;
 		cam.eulerAngles = new Vector3(rx, ry, 0);
 		rb.velocity = Quaternion.Euler(new Vector3(0, cam.eulerAngles.y, 0)) * new Vector3(Input.GetAxis("Horizontal") * velocity, rb.velocity.y, Input.GetAxis("Vertical") * velocity);
+		if((FLAGS & 1) == 0 && rb.velocity != new Vector3(0f, rb.velocity.y, 0f)){
+			FLAGS = (byte) (FLAGS | 1);
+			sound.SetActive(true);
+		} else if((FLAGS & 1) == 1 && rb.velocity == new Vector3(0f, rb.velocity.y, 0f)){
+			FLAGS = (byte) (FLAGS & 254);
+			sound.SetActive(false);
+		}
 
-		if(Input.GetKeyDown(KeyCode.Space) && IsGrounded()){
+		if(Input.GetKey(KeyCode.Space) && IsGrounded()){
 			rb.AddForce(new Vector3(0, jf, 0));
+			jump.Play();
 		}
 	}
 

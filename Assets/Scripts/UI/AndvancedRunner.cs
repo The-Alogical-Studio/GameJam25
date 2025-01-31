@@ -14,16 +14,18 @@ public class AndvancedRunner : MonoBehaviour
 	[SerializeField] private float secs;
 
 	void Update(){
-		if((isEnabled & 1) == 1){
-			FPfil += ((1 / Time.deltaTime) - FPfil) * 0.05f;
-			FPS.text = $"FPS: {FPfil}";
-		}
-		if((isEnabled & 2) == 2){
-			POS.text = $"POS: {player.position}";
-		}
-		if((isEnabled & 4) == 4){
-			secs += Time.deltaTime;
-			tmr.text = $"Time {((int) secs/3600)}/{((int) secs / 60) % 60}/{(int)secs%60}";
+		if(Time.timeScale == 1){
+			if((isEnabled & 1) == 1){
+				FPfil += ((1 / Time.deltaTime) - FPfil) * 0.05f;
+				FPS.text = $"FPS: {FPfil}";
+			}
+			if((isEnabled & 2) == 2){
+				POS.text = $"POS: {player.position}";
+			}
+			if((isEnabled & 4) == 4){
+				secs += Time.deltaTime;
+				tmr.text = $"Time {((int) secs/3600)}/{((int) secs / 60) % 60}/{(int)secs%60}";
+			}
 		}
 
 	}
