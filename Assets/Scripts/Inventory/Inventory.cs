@@ -12,6 +12,8 @@ public class Inventory : MonoBehaviour
 	[SerializeField] private InvaTable inv;
 	[SerializeField] private MinHeap que;
 
+	[SerializeField] private Transform allItems;
+
 	void Awake(){
 
 		que = new MinHeap(10);
@@ -33,7 +35,9 @@ public class Inventory : MonoBehaviour
 	public void DropItem(int slot){
 		if(slots[slot].transform.childCount == 0) return;
 		int id = int.Parse(slots[slot].transform.GetChild(0).name);
-		Instantiate(items[id], transform.position + transform.forward * 2, Quaternion.identity);
+		GameObject gm = Instantiate(items[id], allItems);
+		gm.transform.position = transform.position + transform.GetChild(0).forward * 2;
+		gm.transform.rotation = Quaternion.identity;
 		inv.im[id].count -= 1;
 		if(inv.im[id].count == 0){
 			Destroy(slots[slot].transform.GetChild(0).gameObject);
@@ -89,6 +93,33 @@ public class Inventory : MonoBehaviour
 			}	
 		}
 	}
+
+	public Vector3[] GetPositionFromScene(){
+		Vector3[] result = new Vector3[allItems.childCount];
+		for(int i = 0; i < allItems.childCount; i++){
+			result[i] = allItems.GetChild(i).position;
+		}
+		return result;
+	}
+
+	public int[] GetItemsFromScene(){
+		int[] result = new int[allItems.childCount];
+		for(int i = 0; i < allItems.childCount; i++){
+			result[i] = allItems.GetChild(i).GetComponent<Pickup>().id;
+		}
+		return result;
+	}
+
+	public void LoadItemsToScene(int[] ids, Vector3[] positions){
+		for(int i = 0; i < allItems.childCount; i++){
+			Destroy(allItems.GetChild(i).gameObject);
+		}
+
+		for(int i = 0; i < ids.Length; i++){
+			GameObject gm = Instantiate(items[ids[i]], allItems);
+			gm.transform.position = positions[i];
+		}
+	}
 }
 
 [Serializable]
@@ -106,7 +137,7 @@ public class InvaTable {
 /*
 [Serializable]
 public class HQueueNode {
-	public int value;
+	public GameObject value;
 	public HQueueNode next;
 }
 
@@ -116,7 +147,7 @@ public class HQueue {
 	public HQueueNode first;
 	public HQueueNode last;
 
-	public void push(int i){
+	public void push(GameObject i){
 		HQueueNode nLast = new HQueueNode();
 		nLast.value = i;
 
@@ -130,8 +161,8 @@ public class HQueue {
 		last = nLast;
 	}
 
-	public int pop(){
-		int rV = first.value;
+	public GameObject pop(){
+		GameObject rV = first.value;
 		first = first.next;
 		return rV;
 	}

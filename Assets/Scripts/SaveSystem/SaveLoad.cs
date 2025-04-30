@@ -14,7 +14,7 @@ public class SaveLoad : MonoBehaviour
 
 	public void Save(LegacyDrop drop){
 		int slot = drop.getToggleId();
-		PlayerStorage sv = new PlayerStorage(player.position, inva.GetCount(), inva.GetType());
+		PlayerStorage sv = new PlayerStorage(player.position, inva.GetCount(), inva.GetType(), inva.GetItemsFromScene(), inva.GetPositionFromScene());
 		HackerSave saver = new HackerSave($"./SaveIA_{slot}.json");
 		saver.writeFile(sv);
 	}
@@ -25,5 +25,6 @@ public class SaveLoad : MonoBehaviour
 		PlayerStorage data = loader.readFile();
 		player.position = data.position;
 		inva.Load(data.inventoryId, data.inventoryCount);
+		inva.LoadItemsToScene(data.idPlace, data.posPlace);
 	}
 }

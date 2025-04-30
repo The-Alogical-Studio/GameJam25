@@ -5,7 +5,8 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
 	[SerializeField] private bool flag;
-	[SerializeField] private int id;
+	public int id;
+	public int num;
 
 	void OnTriggerEnter(Collider other){
 		if(other.tag == "Player" && !flag){

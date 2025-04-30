@@ -18,10 +18,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -216,17 +214,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6080}
     - Class: 114
-      Script: {instanceID: 6420}
+      Script: {instanceID: 6214}
     - Class: 114
-      Script: {instanceID: 6656}
+      Script: {instanceID: 6422}
     - Class: 114
-      Script: {instanceID: 6806}
+      Script: {instanceID: 6658}
     - Class: 114
-      Script: {instanceID: 6932}
+      Script: {instanceID: 6808}
     - Class: 114
-      Script: {instanceID: 7256}
+      Script: {instanceID: 6934}
     - Class: 114
-      Script: {instanceID: 23488}
+      Script: {instanceID: 7258}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -347,7 +345,7 @@ ScriptsOnlyBuild:
     className: LayoutElement
   - hash:
       serializedVersion: 2
-      Hash: 13439904a651ecf3c701305d1f0078fe
+      Hash: 569288333d590baedb8250c2ea6fee7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pickup
@@ -359,7 +357,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 65b3a3b9a7779d539ec75a3ceddebdba
+      Hash: e18d215d0377eaab6ba77d14cba5f643
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SaveLoad
@@ -953,6 +951,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: a236431529e15834e4c461e9cba20148
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DiaMan
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1061,7 +1065,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 19b06d78b643421bb582be4dab51361d
+      Hash: f4c4152cdc011d733167e8159f38c445
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Inventory
@@ -1155,12 +1159,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: a236431529e15834e4c461e9cba20148
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DiaMan
   platform: 19
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
