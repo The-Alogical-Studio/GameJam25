@@ -39,8 +39,12 @@ public class HackerSave
 public struct PlayerStorage
 {
 	public Vector3 position;
+	public int[] inventoryCount;
+	public int[] inventoryId;
 
-	public PlayerStorage(Vector3 position) {
+	public PlayerStorage(Vector3 position, int[] inventoryCount, int[] inventoryId) {
 		this.position = position;
+		this.inventoryId = inventoryId;
+		this.inventoryCount = inventoryCount;
 	}
 }

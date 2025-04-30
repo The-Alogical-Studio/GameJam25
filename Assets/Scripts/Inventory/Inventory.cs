@@ -55,7 +55,40 @@ public class Inventory : MonoBehaviour
 		}
 	}
 
+	public int[] GetType(){
+		int[] result = new int[slots.Length];
+		int i = 0;
+		foreach(Item item in inv.im){
+			if(item.count != 0){
+				result[int.Parse(item.slot.transform.GetChild(0).name)] = i;
+			}
 
+			i++;
+		}
+		return result;
+	}
+
+	public int[] GetCount(){
+		int[] result = new int[slots.Length];
+		foreach(Item item in inv.im){
+			result[int.Parse(item.slot.transform.GetChild(0).name)] = item.count;
+		}
+		return result;
+	}
+
+	public void Load(int[] id, int[] count){
+		que = new MinHeap(10);
+		for(int i = 0; i < slots.Length; i++){
+			if(count[i] != 0){
+				inv.im[id[i]].count = count[i];
+				inv.im[id[i]].slot = slots[i];
+				GameObject gm = Instantiate(itemsIn[id[i]], slots[i].transform);
+				gm.name = $"{id[i]}";
+			} else {
+				que.Insert(i);
+			}	
+		}
+	}
 }
 
 [Serializable]

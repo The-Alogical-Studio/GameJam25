@@ -6,9 +6,15 @@ using UnityEngine.UI;
 public class SaveLoad : MonoBehaviour
 {
 	[SerializeField] private Transform player;
+	[SerializeField] private Inventory inva;
+
+	void Awake(){
+		inva = player.GetComponent<Inventory>();
+	}
+
 	public void Save(LegacyDrop drop){
 		int slot = drop.getToggleId();
-		PlayerStorage sv = new PlayerStorage(player.position);
+		PlayerStorage sv = new PlayerStorage(player.position, inva.GetCount(), inva.GetType());
 		HackerSave saver = new HackerSave($"./SaveIA_{slot}.json");
 		saver.writeFile(sv);
 	}
@@ -18,5 +24,6 @@ public class SaveLoad : MonoBehaviour
 		HackerSave loader = new HackerSave($"./SaveIA_{slot}.json");
 		PlayerStorage data = loader.readFile();
 		player.position = data.position;
+		inva.Load(data.inventoryId, data.inventoryCount);
 	}
 }
