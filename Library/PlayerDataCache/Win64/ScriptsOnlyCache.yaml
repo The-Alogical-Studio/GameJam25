@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - LegacyDrop
     - LevelChanger
     - MenuLister
+    - MusicMan
     - SaveLoad
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -83,6 +84,12 @@ ScriptsOnlyBuild:
     fullTypeName: SaveLoad
     methodName: Load
   - assembly: Assembly-CSharp
+    fullTypeName: MusicMan
+    methodName: ISCRm
+  - assembly: Assembly-CSharp
+    fullTypeName: MusicMan
+    methodName: ISCRs
+  - assembly: Assembly-CSharp
     fullTypeName: SaveLoad
     methodName: Save
   - assembly: Assembly-CSharp
@@ -143,6 +150,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 89
@@ -194,11 +205,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6078}
     - Class: 114
-      Script: {instanceID: 6652}
+      Script: {instanceID: 6418}
     - Class: 114
-      Script: {instanceID: 6926}
+      Script: {instanceID: 6654}
     - Class: 114
-      Script: {instanceID: 7250}
+      Script: {instanceID: 6928}
+    - Class: 114
+      Script: {instanceID: 7252}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -905,7 +918,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 5d0f3124e9559bc51154bc9a3872eb1f
+      Hash: b43f349df02616babaa457e91708a488
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller
@@ -951,6 +964,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: fe35a3bef42603599cd458923b11c4aa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MusicMan
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -1111,4 +1130,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/nicol/Desktop/GameJamTile/GameJam25.exe
+  playerPath: C:/Users/nicol/Desktop/Preblank/GameJam25.exe
