@@ -7,7 +7,7 @@ public class MenuLister : MonoBehaviour
 	[SerializeField] private GameObject menu;
 	[SerializeField] private GameObject settings;
 	[SerializeField] private GameObject saveLoad;
-	[SerializeField] private byte flag;
+	public byte flag;
 
 	void Update(){
 		if(Input.GetKeyDown(KeyCode.Escape)){

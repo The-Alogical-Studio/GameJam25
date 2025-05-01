@@ -11,7 +11,7 @@ public class DiaMan : MonoBehaviour
 	[SerializeField] private string name;
 
 	[SerializeField] private int seq;
-	[SerializeField] private int rep;
+	public int rep;
 
 	[SerializeField] private Text nameText;
 	[SerializeField] private Text diaText;

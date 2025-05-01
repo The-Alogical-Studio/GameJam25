@@ -3,23 +3,28 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AndvancedRunner
     - Awaker
+    - Boss
     - Controller
     - DiaMan
     - FPU
+    - Gun
     - Inventory
     - LegacyDrop
     - LevelChanger
     - MenuLister
     - MusicMan
     - Pickup
+    - PlayerHP
     - SaveLoad
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -163,8 +168,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -225,6 +228,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6934}
     - Class: 114
       Script: {instanceID: 7258}
+    - Class: 114
+      Script: {instanceID: 26688}
+    - Class: 114
+      Script: {instanceID: 36480}
+    - Class: 114
+      Script: {instanceID: 36486}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -235,6 +244,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 195
+      Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
     - Class: 213
@@ -244,6 +255,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
     - Class: 328
       Script: {instanceID: 0}
@@ -267,8 +280,6 @@ ScriptsOnlyBuild:
     - Class: 81
       Script: {instanceID: 0}
     - Class: 84
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -357,7 +368,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: e18d215d0377eaab6ba77d14cba5f643
+      Hash: d04c7d5210fdbacdcc7ea532482b4b7a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SaveLoad
@@ -1159,6 +1170,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: ae4e6414c60f6d63e95da25a1c45e513
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Gun
+  - hash:
+      serializedVersion: 2
+      Hash: 2906fa1fb664ac326d45d185d86b5586
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boss
+  - hash:
+      serializedVersion: 2
+      Hash: cbeb0cb1065ddeaae06ad7759f3ff7af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHP
   platform: 19
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity

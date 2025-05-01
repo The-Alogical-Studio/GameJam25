@@ -345,6 +345,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/Boss/Boss.cs"
+"Assets/Scripts/Boss/PlayerHP.cs"
 "Assets/Scripts/Dialog/DiaMan.cs"
 "Assets/Scripts/Inventory/Inventory.cs"
 "Assets/Scripts/Inventory/Pickup.cs"
@@ -358,6 +360,7 @@
 "Assets/Scripts/UI/MenuLister.cs"
 "Assets/Scripts/UI/TitleScreen/Awaker.cs"
 "Assets/Scripts/UI/TitleScreen/LevelChanger.cs"
+"Assets/Scripts/Weapon/Gun.cs"
 -langversion:9.0
 
 /deterministic

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - StartObject
+  - Boss
+  - PBull
+  - BBull
   layers:
   - Default
   - TransparentFX
