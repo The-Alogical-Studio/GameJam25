@@ -46,6 +46,26 @@ public class Inventory : MonoBehaviour
 		}
 	}
 
+	public bool HandleItem(int id){
+		if(slots[HotSlot].transform.childCount == 0) return false;
+		int id_check = int.Parse(slots[HotSlot].transform.GetChild(0).name);
+		if(id_check == id){
+			return true;
+		}
+		return false;
+	}
+
+	public void DestroyHandleItem(){
+		if(slots[HotSlot].transform.childCount == 0) return;
+		int id = int.Parse(slots[HotSlot].transform.GetChild(0).name);
+		inv.im[id].count -= 1;
+		if(inv.im[id].count == 0){
+			Destroy(slots[HotSlot].transform.GetChild(0).gameObject);
+			inv.im[id].slot = null;
+			que.Insert(HotSlot);
+		}
+	}
+
 	void Update(){
 		for(int i = 0; i < slots.Length; i++){
 			if(Input.GetKeyDown(KeyCode.Alpha1 + i)){
