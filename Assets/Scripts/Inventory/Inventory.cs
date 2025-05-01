@@ -189,6 +189,7 @@ public class HQueue {
 }
 */
 
+[Serializable]
 public class MinHeap
 {
 	private int[] heap;
