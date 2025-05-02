@@ -353,6 +353,7 @@
 "Assets/Scripts/Inventory/Pickup.cs"
 "Assets/Scripts/Player/Controller.cs"
 "Assets/Scripts/SaveSystem/HackerSave.cs"
+"Assets/Scripts/SaveSystem/MenuSaver.cs"
 "Assets/Scripts/SaveSystem/SaveLoad.cs"
 "Assets/Scripts/Sound/MusicMan.cs"
 "Assets/Scripts/UI/AndvancedRunner.cs"

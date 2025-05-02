@@ -8,10 +8,16 @@ public class AndvancedRunner : MonoBehaviour
 	[SerializeField] private Text FPS;
 	[SerializeField] private Text POS;
 	[SerializeField] private Text tmr;
-	[SerializeField] private byte isEnabled;
+	public byte isEnabled;
 	[SerializeField] private float FPfil;
 	[SerializeField] private Transform player;
 	[SerializeField] private float secs;
+
+	void Start(){
+		FPS.gameObject.SetActive((isEnabled & 1) == 1 ? true : false);
+		POS.gameObject.SetActive((isEnabled & 2) == 2 ? true : false);
+		tmr.gameObject.SetActive((isEnabled & 4) == 4 ? true : false);
+	}
 
 	void Update(){
 		if(Time.timeScale == 1){

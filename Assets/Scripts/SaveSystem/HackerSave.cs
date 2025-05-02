@@ -25,11 +25,30 @@ public class HackerSave
 		//return false;
 	}
 
+	public bool writeFile(MenuStorage obj){
+		// Create a file to write to.
+		using (StreamWriter sw = new StreamWriter(name))
+		{
+			sw.WriteLine(JsonUtility.ToJson(obj));
+			return true;
+		}
+		//return false;
+	}
+
 	public PlayerStorage readFile(){
 		using (StreamReader sr = new StreamReader(name))
 		{
 			string s = sr.ReadLine();
 			PlayerStorage data = JsonUtility.FromJson<PlayerStorage>(s);
+			return data;
+		}
+	}
+
+	public MenuStorage readFile(bool fla){
+		using (StreamReader sr = new StreamReader(name))
+		{
+			string s = sr.ReadLine();
+			MenuStorage data = JsonUtility.FromJson<MenuStorage>(s);
 			return data;
 		}
 	}
