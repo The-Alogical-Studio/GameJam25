@@ -20,7 +20,7 @@ public class LevelChanger : MonoBehaviour
 	}
 
 	public IEnumerator Waiter(){
-		yield return new WaitForSeconds(0.25f);
+		yield return new WaitForSeconds(0.5f);
 		PlayerPrefs.SetInt("Logout", 1);
 		SceneManager.LoadScene(levelToLoad);
 	}

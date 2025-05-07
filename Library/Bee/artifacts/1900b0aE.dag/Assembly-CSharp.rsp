@@ -362,6 +362,7 @@
 "Assets/Scripts/UI/MenuLister.cs"
 "Assets/Scripts/UI/TitleScreen/Awaker.cs"
 "Assets/Scripts/UI/TitleScreen/LevelChanger.cs"
+"Assets/Scripts/UI/TitleScreen/Quiter.cs"
 "Assets/Scripts/Weapon/Gun.cs"
 -langversion:9.0
 

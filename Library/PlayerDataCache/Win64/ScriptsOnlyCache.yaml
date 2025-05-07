@@ -13,9 +13,11 @@ ScriptsOnlyBuild:
     - LegacyDrop
     - LevelChanger
     - MenuLister
+    - MenuSaver
     - MusicMan
     - Pickup
     - PlayerHP
+    - Quiter
     - SaveLoad
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -80,8 +82,17 @@ ScriptsOnlyBuild:
     fullTypeName: LevelChanger
     methodName: LDS
   - assembly: Assembly-CSharp
+    fullTypeName: Quiter
+    methodName: AboutInverse
+  - assembly: Assembly-CSharp
+    fullTypeName: Quiter
+    methodName: Quit
+  - assembly: Assembly-CSharp
     fullTypeName: FPU
     methodName: FixedMax
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuSaver
+    methodName: Save
   - assembly: Assembly-CSharp
     fullTypeName: MenuLister
     methodName: SettingsDisplay
@@ -95,14 +106,23 @@ ScriptsOnlyBuild:
     fullTypeName: AndvancedRunner
     methodName: SetFlag
   - assembly: Assembly-CSharp
+    fullTypeName: MenuSaver
+    methodName: Save
+  - assembly: Assembly-CSharp
     fullTypeName: SaveLoad
     methodName: Load
   - assembly: Assembly-CSharp
     fullTypeName: MusicMan
     methodName: ISCRm
   - assembly: Assembly-CSharp
+    fullTypeName: MenuSaver
+    methodName: Save
+  - assembly: Assembly-CSharp
     fullTypeName: MusicMan
     methodName: ISCRs
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuSaver
+    methodName: Save
   - assembly: Assembly-CSharp
     fullTypeName: SaveLoad
     methodName: Save
@@ -116,11 +136,17 @@ ScriptsOnlyBuild:
     fullTypeName: AndvancedRunner
     methodName: SetFlag
   - assembly: Assembly-CSharp
+    fullTypeName: MenuSaver
+    methodName: Save
+  - assembly: Assembly-CSharp
     fullTypeName: AndvancedRunner
     methodName: SetFlag
   - assembly: Assembly-CSharp
     fullTypeName: FPU
     methodName: FPSMax
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuSaver
+    methodName: Save
   - assembly: Assembly-CSharp
     fullTypeName: MenuLister
     methodName: SettingsDisplay
@@ -160,8 +186,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -172,8 +196,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
     - Class: 104
@@ -181,65 +203,67 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1514}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1696}
+      Script: {instanceID: 1698}
     - Class: 114
-      Script: {instanceID: 1714}
+      Script: {instanceID: 1716}
     - Class: 114
-      Script: {instanceID: 2256}
+      Script: {instanceID: 2258}
     - Class: 114
-      Script: {instanceID: 2540}
+      Script: {instanceID: 2542}
     - Class: 114
-      Script: {instanceID: 2620}
+      Script: {instanceID: 2622}
     - Class: 114
-      Script: {instanceID: 2634}
+      Script: {instanceID: 2636}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2744}
     - Class: 114
-      Script: {instanceID: 2788}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 3020}
+      Script: {instanceID: 3022}
     - Class: 114
-      Script: {instanceID: 3740}
+      Script: {instanceID: 3546}
     - Class: 114
-      Script: {instanceID: 3766}
+      Script: {instanceID: 3744}
     - Class: 114
-      Script: {instanceID: 4038}
+      Script: {instanceID: 3770}
     - Class: 114
-      Script: {instanceID: 4252}
+      Script: {instanceID: 4042}
     - Class: 114
-      Script: {instanceID: 4798}
+      Script: {instanceID: 4256}
     - Class: 114
-      Script: {instanceID: 4846}
+      Script: {instanceID: 4802}
     - Class: 114
-      Script: {instanceID: 5158}
+      Script: {instanceID: 4850}
     - Class: 114
-      Script: {instanceID: 5450}
+      Script: {instanceID: 5162}
     - Class: 114
-      Script: {instanceID: 5808}
+      Script: {instanceID: 5454}
     - Class: 114
-      Script: {instanceID: 5908}
+      Script: {instanceID: 5812}
     - Class: 114
-      Script: {instanceID: 5916}
+      Script: {instanceID: 5912}
     - Class: 114
-      Script: {instanceID: 6084}
+      Script: {instanceID: 5920}
     - Class: 114
-      Script: {instanceID: 6218}
+      Script: {instanceID: 6088}
     - Class: 114
-      Script: {instanceID: 6426}
+      Script: {instanceID: 6222}
     - Class: 114
-      Script: {instanceID: 6662}
+      Script: {instanceID: 6430}
     - Class: 114
-      Script: {instanceID: 6812}
+      Script: {instanceID: 6666}
     - Class: 114
-      Script: {instanceID: 6938}
+      Script: {instanceID: 6816}
     - Class: 114
-      Script: {instanceID: 7050}
+      Script: {instanceID: 6942}
     - Class: 114
-      Script: {instanceID: 7264}
+      Script: {instanceID: 7054}
     - Class: 114
-      Script: {instanceID: 26190}
+      Script: {instanceID: 7268}
+    - Class: 114
+      Script: {instanceID: 7320}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -306,28 +330,36 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1514}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 2256}
+      Script: {instanceID: 2258}
     - Class: 114
-      Script: {instanceID: 2540}
+      Script: {instanceID: 2542}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2744}
     - Class: 114
-      Script: {instanceID: 3020}
+      Script: {instanceID: 3022}
     - Class: 114
-      Script: {instanceID: 4038}
+      Script: {instanceID: 4042}
     - Class: 114
-      Script: {instanceID: 5450}
+      Script: {instanceID: 5162}
     - Class: 114
-      Script: {instanceID: 5504}
+      Script: {instanceID: 5454}
     - Class: 114
-      Script: {instanceID: 5908}
+      Script: {instanceID: 5508}
+    - Class: 114
+      Script: {instanceID: 5912}
+    - Class: 114
+      Script: {instanceID: 25096}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -658,6 +690,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionExit2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 5422dfb3da9c5b44844ce78c355e1feb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuSaver
   - hash:
       serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
@@ -1176,6 +1214,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: e4ee1899c2279d8a9f2f3f57b82c22de
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HackerBlock
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1206,10 +1250,10 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: e4ee1899c2279d8a9f2f3f57b82c22de
+      Hash: 1eb141a6b76d4f70784931d780557c7f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: HackerBlock
+    className: Quiter
   platform: 19
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
