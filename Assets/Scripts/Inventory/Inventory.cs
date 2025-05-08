@@ -5,7 +5,7 @@ using System;
 
 public class Inventory : MonoBehaviour
 {
-	[SerializeField] private GameObject[] items;
+	public GameObject[] items;
 	[SerializeField] private GameObject[] itemsIn;
 	[SerializeField] private GameObject[] slots;
 	[SerializeField] private int HotSlot;
