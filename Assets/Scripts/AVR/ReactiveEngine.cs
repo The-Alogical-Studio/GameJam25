@@ -17,7 +17,7 @@ public class ReactiveEngine : MonoBehaviour
 			}
 
 			if(isFly){
-				rX += Input.GetAxis("Vertical");
+				rX -= Input.GetAxis("Vertical");
 				rY += Input.GetAxis("Horizontal");
 				body.eulerAngles = new Vector3(rX, rY, 0);;
 				rb.velocity = body.forward * velocity;

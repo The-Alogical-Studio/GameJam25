@@ -305,6 +305,7 @@
 "Assets/Scripts/AVR/InvTaker.cs"
 "Assets/Scripts/AVR/MicroController.cs"
 "Assets/Scripts/AVR/MiniCamera.cs"
+"Assets/Scripts/AVR/Protecor.cs"
 "Assets/Scripts/AVR/ReactiveEngine.cs"
 "Assets/Scripts/AVR/Rotater.cs"
 "Assets/Scripts/AVR/Wheels.cs"
