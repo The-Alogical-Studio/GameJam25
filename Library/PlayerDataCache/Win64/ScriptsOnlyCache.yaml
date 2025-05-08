@@ -9,16 +9,20 @@ ScriptsOnlyBuild:
     - FPU
     - Gun
     - HackerBlock
+    - InvTaker
     - Inventory
     - LegacyDrop
     - LevelChanger
     - MenuLister
     - MenuSaver
+    - MicroController
+    - MiniCamera
     - MusicMan
     - Pickup
     - PlayerHP
     - Quiter
     - SaveLoad
+    - Wheels
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -237,33 +241,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4850}
     - Class: 114
-      Script: {instanceID: 5162}
+      Script: {instanceID: 5164}
     - Class: 114
-      Script: {instanceID: 5454}
+      Script: {instanceID: 5456}
     - Class: 114
-      Script: {instanceID: 5812}
+      Script: {instanceID: 5814}
     - Class: 114
-      Script: {instanceID: 5912}
+      Script: {instanceID: 5914}
     - Class: 114
-      Script: {instanceID: 5920}
+      Script: {instanceID: 5922}
     - Class: 114
-      Script: {instanceID: 6088}
+      Script: {instanceID: 6090}
     - Class: 114
-      Script: {instanceID: 6222}
+      Script: {instanceID: 6224}
     - Class: 114
-      Script: {instanceID: 6430}
+      Script: {instanceID: 6432}
     - Class: 114
-      Script: {instanceID: 6666}
+      Script: {instanceID: 6668}
     - Class: 114
-      Script: {instanceID: 6816}
+      Script: {instanceID: 6818}
     - Class: 114
-      Script: {instanceID: 6942}
+      Script: {instanceID: 6944}
     - Class: 114
-      Script: {instanceID: 7054}
+      Script: {instanceID: 7056}
     - Class: 114
-      Script: {instanceID: 7268}
+      Script: {instanceID: 7270}
     - Class: 114
-      Script: {instanceID: 7320}
+      Script: {instanceID: 7322}
+    - Class: 114
+      Script: {instanceID: 67570}
+    - Class: 114
+      Script: {instanceID: 67578}
+    - Class: 114
+      Script: {instanceID: 71170}
+    - Class: 114
+      Script: {instanceID: 111350}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -342,15 +354,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4042}
     - Class: 114
-      Script: {instanceID: 5162}
+      Script: {instanceID: 4952}
     - Class: 114
-      Script: {instanceID: 5454}
+      Script: {instanceID: 5164}
     - Class: 114
-      Script: {instanceID: 5508}
+      Script: {instanceID: 5456}
     - Class: 114
-      Script: {instanceID: 5912}
+      Script: {instanceID: 5510}
     - Class: 114
-      Script: {instanceID: 25096}
+      Script: {instanceID: 5914}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -908,6 +920,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 1eb141a6b76d4f70784931d780557c7f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Quiter
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1016,7 +1034,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: b43f349df02616babaa457e91708a488
+      Hash: 569a51f078c9a58c42b437b1fd9c3521
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller
@@ -1142,7 +1160,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 3aedb90477d7e7222d1e8d6d938fe3f8
+      Hash: 2a3835d7a8452f7f5c310011892acd5c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Inventory
@@ -1250,12 +1268,30 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 1eb141a6b76d4f70784931d780557c7f
+      Hash: dabc49b17deacd205bec7f7a981c6abe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Quiter
+    className: MicroController
+  - hash:
+      serializedVersion: 2
+      Hash: 8720d6c50257ad56105cce7791774769
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Wheels
+  - hash:
+      serializedVersion: 2
+      Hash: c3b50e13b54496836144898285177fdb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MiniCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 306e40a7a37e1e0fc025cdbd4b8ada0c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InvTaker
   platform: 19
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/nicol/Desktop/Preblank/GameJam25.exe
+  playerPath: C:/Users/nicol/Desktop/Build1000a/GameJam25.exe
