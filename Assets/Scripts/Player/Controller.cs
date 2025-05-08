@@ -13,6 +13,8 @@ public class Controller : MonoBehaviour
 	[SerializeField] private AudioSource jump;
 	[SerializeField] private byte FLAGS;
 
+	public bool mode;
+
 	private float ry;
 	private float rx;
 
@@ -25,6 +27,7 @@ public class Controller : MonoBehaviour
 		ry += Input.GetAxis("Mouse X") * sens;
 		rx -= Input.GetAxis("Mouse Y") * sens;
 		cam.eulerAngles = new Vector3(rx, ry, 0);
+		if(mode) return;
 		rb.velocity = Quaternion.Euler(new Vector3(0, cam.eulerAngles.y, 0)) * new Vector3(Input.GetAxis("Horizontal") * velocity, rb.velocity.y, Input.GetAxis("Vertical") * velocity);
 		if((FLAGS & 1) == 0 && rb.velocity != new Vector3(0f, rb.velocity.y, 0f)){
 			FLAGS = (byte) (FLAGS | 1);

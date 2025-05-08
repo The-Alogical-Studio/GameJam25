@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
 	[SerializeField] private MinHeap que;
 
 	[SerializeField] private Transform allItems;
+	[SerializeField] private Controller player;
 
 	void Awake(){
 
@@ -21,6 +22,7 @@ public class Inventory : MonoBehaviour
 		for(int i = 0; i < slots.Length; i++){
 			que.Insert(i);
 		}
+		player = GetComponent<Controller>();
 	}
 
 	public void AddItem(int id){
@@ -55,6 +57,12 @@ public class Inventory : MonoBehaviour
 		return false;
 	}
 
+	public int GetHandleItem(){
+		if(slots[HotSlot].transform.childCount == 0) return -1;
+		int id_check = int.Parse(slots[HotSlot].transform.GetChild(0).name);
+		return id_check;
+	}
+
 	public void DestroyHandleItem(){
 		if(slots[HotSlot].transform.childCount == 0) return;
 		int id = int.Parse(slots[HotSlot].transform.GetChild(0).name);
@@ -67,6 +75,7 @@ public class Inventory : MonoBehaviour
 	}
 
 	void Update(){
+		if(player.mode) return;
 		for(int i = 0; i < slots.Length; i++){
 			if(Input.GetKeyDown(KeyCode.Alpha1 + i)){
 				HotSlot = i;
