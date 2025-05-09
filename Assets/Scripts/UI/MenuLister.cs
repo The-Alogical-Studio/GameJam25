@@ -17,6 +17,8 @@ public class MenuLister : MonoBehaviour
 				Time.timeScale = 0.00001f;
 			}
 			menu.SetActive((flag & 1) == 1 ? false : true);
+			Cursor.visible = (flag & 1) == 1 ? false : true;
+			Cursor.lockState = (flag & 1) == 1 ? CursorLockMode.Locked : CursorLockMode.None;
 			if((flag & 1) == 1){
 				flag = (byte) ((sbyte) ~1 & flag);
 			} else {

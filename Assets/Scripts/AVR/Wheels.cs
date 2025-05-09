@@ -9,9 +9,11 @@ public class Wheels : MonoBehaviour
 	[SerializeField] private float velocity;
 	[SerializeField] private float rY;
 	[SerializeField] private Transform controller;
+	[SerializeField] private bool flager = true;
 
 	void FixedUpdate(){
-		if(player.mode){
+		if(Input.GetKeyDown(KeyCode.R)) flager = !flager;
+		if(player.mode && flager){
 			float Horizontal = Input.GetAxis("Horizontal");
 			float Vertical = Input.GetAxis("Vertical") * velocity;
 			rY += Horizontal;

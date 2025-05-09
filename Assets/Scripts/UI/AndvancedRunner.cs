@@ -13,10 +13,21 @@ public class AndvancedRunner : MonoBehaviour
 	[SerializeField] private Transform player;
 	[SerializeField] private float secs;
 
+	[SerializeField] private Toggle FP;
+	[SerializeField] private Toggle TM;
+	[SerializeField] private MenuSaver sv;
+
 	void Start(){
+		/*
+		byte iA = isEnabled; 
+		TM.isOn = (isEnabled & 4) == 4;
+		FP.isOn = (isEnabled & 1) == 1;
+		isEnabled = iA;
+		sv.Save();
 		FPS.gameObject.SetActive((isEnabled & 1) == 1 ? true : false);
 		POS.gameObject.SetActive((isEnabled & 2) == 2 ? true : false);
 		tmr.gameObject.SetActive((isEnabled & 4) == 4 ? true : false);
+		*/
 	}
 
 	void Update(){
@@ -25,7 +36,7 @@ public class AndvancedRunner : MonoBehaviour
 				FPfil += ((1 / Time.deltaTime) - FPfil) * 0.05f;
 				FPS.text = $"FPS: {FPfil}";
 			}
-			if((isEnabled & 2) == 2){
+			if((isEnabled & 1) == 1){
 				POS.text = $"POS: {player.position}";
 			}
 			if((isEnabled & 4) == 4){

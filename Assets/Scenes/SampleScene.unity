@@ -1232,6 +1232,7 @@ MonoBehaviour:
   velocity: 2
   rY: 0
   controller: {fileID: 698095184}
+  flager: 1
 --- !u!1 &222167845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,6 +1859,9 @@ MonoBehaviour:
   FPfil: 0
   player: {fileID: 774790558}
   secs: 0
+  FP: {fileID: 1730383924}
+  TM: {fileID: 1176431452}
+  sv: {fileID: 316772559}
 --- !u!114 &316772559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1873,6 +1877,10 @@ MonoBehaviour:
   runner: {fileID: 316772558}
   musicScrollbar: {fileID: 1297820870}
   sfxScrollbar: {fileID: 1352995778}
+  fps: {fileID: 1840280865}
+  pps: {fileID: 206115140}
+  FP: {fileID: 1730383924}
+  TM: {fileID: 1176431452}
 --- !u!1 &331853391
 GameObject:
   m_ObjectHideFlags: 0
@@ -4674,7 +4682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 6619990115881531612}
+  - {fileID: 503068399423753436, guid: 9a11b43fd4254484f807eb17d79d4d7b, type: 3}
   - {fileID: 6566216357091691785, guid: 262405c6593b6bc418b2dd8fd5ae4a5c, type: 3}
   - {fileID: 7161749620014259009, guid: 88ce3d7f7417e864faee684af92f4a73, type: 3}
   - {fileID: 2062106549014907016, guid: 1923825a5e389304f821e2c46f57bdc5, type: 3}
@@ -12627,7 +12635,7 @@ MonoBehaviour:
   rb: {fileID: 715869095471442469}
   rX: 0
   rY: 0
-  velocity: 5
+  velocity: 10
   isFly: 0
 --- !u!1 &919132149133666454
 GameObject:
@@ -15927,11 +15935,6 @@ Transform:
   m_Father: {fileID: 2281623531530731488}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6619990115881531612 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 503068399423753436, guid: 9a11b43fd4254484f807eb17d79d4d7b, type: 3}
-  m_PrefabInstance: {fileID: 6711964215950160896}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6645823805029884941
 Transform:
   m_ObjectHideFlags: 0
@@ -16795,6 +16798,7 @@ MonoBehaviour:
   velocity: 2
   rY: 0
   controller: {fileID: 715869095471442467}
+  flager: 1
 --- !u!222 &7656945686644880813
 CanvasRenderer:
   m_ObjectHideFlags: 0

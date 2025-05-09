@@ -32,10 +32,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -734,7 +732,7 @@ ScriptsOnlyBuild:
     className: Balloon
   - hash:
       serializedVersion: 2
-      Hash: 5422dfb3da9c5b44844ce78c355e1feb
+      Hash: ee677d171ed1335fa4917c640dc4dc1d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuSaver
@@ -854,7 +852,7 @@ ScriptsOnlyBuild:
     className: UnityOnCancelMessageListener
   - hash:
       serializedVersion: 2
-      Hash: ebc01bf91f20ebf65aec16d823c2b0f2
+      Hash: bde33c954ef22f5de257bf4b6fd651d4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AndvancedRunner
@@ -1034,7 +1032,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpAsButtonMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8720d6c50257ad56105cce7791774769
+      Hash: 82152c947fb06a17ff8a447e8b85a4ee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Wheels
@@ -1330,4 +1328,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/nicol/Desktop/Build1002a/GameJam25.exe
+  playerPath: C:/Users/nicol/Desktop/Build1003d/GameJam25.exe
