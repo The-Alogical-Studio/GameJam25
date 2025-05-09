@@ -63,14 +63,15 @@ public struct PlayerStorage
 	public int[] idPlace;
 	public Vector3[] posPlace;
 	public int[] dialogs;
+	public int modules;
 
-	public PlayerStorage(Vector3 position, int[] inventoryCount, int[] inventoryId, int[] idPlace, Vector3[] posPlace, int[] dialogs) {
+	public PlayerStorage(Vector3 position, int[] inventoryCount, int[] inventoryId, int[] idPlace, Vector3[] posPlace, int[] dialogs, int modules) {
 		this.position = position;
 		this.inventoryId = inventoryId;
 		this.inventoryCount = inventoryCount;
 		this.idPlace = idPlace;
 		this.posPlace = posPlace;
 		this.dialogs = dialogs;
-
+		this.modules = modules;
 	}
 }

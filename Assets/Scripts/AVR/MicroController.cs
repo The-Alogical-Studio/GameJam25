@@ -62,4 +62,7 @@ public class MicroController : MonoBehaviour
 	void OnTriggerExit(Collider other){
 		inColl = true;
 	}
+
+	public int GetMod() {return modulesF;}
+	public void SetMod(int mod) {modulesF = mod;}
 }

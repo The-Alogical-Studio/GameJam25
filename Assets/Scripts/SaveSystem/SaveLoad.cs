@@ -8,6 +8,7 @@ public class SaveLoad : MonoBehaviour
 	[SerializeField] private Transform player;
 	[SerializeField] private Inventory inva;
 	[SerializeField] private DiaMan[] dm;
+	[SerializeField] private MicroController avr;
 
 	void Awake(){
 		inva = player.GetComponent<Inventory>();
@@ -19,7 +20,7 @@ public class SaveLoad : MonoBehaviour
 		for(int i = 0; i < dm.Length; i++){
 			diam[i] = dm[i].rep;
 		}
-		PlayerStorage sv = new PlayerStorage(player.position, inva.GetCount(), inva.GetType(), inva.GetItemsFromScene(), inva.GetPositionFromScene(), diam);
+		PlayerStorage sv = new PlayerStorage(player.position, inva.GetCount(), inva.GetType(), inva.GetItemsFromScene(), inva.GetPositionFromScene(), diam, avr.GetMod());
 		HackerSave saver = new HackerSave($"./SaveIA_{slot}.json");
 		saver.writeFile(sv);
 	}
@@ -35,5 +36,6 @@ public class SaveLoad : MonoBehaviour
 		for(int i = 0; i < dm.Length; i++){
 			dm[i].rep = data.dialogs[i];
 		}
+		avr.SetMod(data.modules);
 	}
 }
