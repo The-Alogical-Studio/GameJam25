@@ -14,6 +14,8 @@ public class ReactiveEngine : MonoBehaviour
 		if(con.mode){
 			if(Input.GetKeyDown(KeyCode.R)){
 				isFly = !isFly;
+				rX = body.eulerAngles.x;
+				rY = body.eulerAngles.y;
 			}
 
 			if(isFly){

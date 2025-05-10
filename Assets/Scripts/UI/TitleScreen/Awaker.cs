@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Awaker : MonoBehaviour
 {
+	[SerializeField] private AudioSource src;
 
 	public void Awake()
 	{
@@ -22,5 +23,6 @@ public class Awaker : MonoBehaviour
 	public IEnumerator Waiter(){
 		yield return new WaitForSeconds(7f);
 		Destroy(gameObject);
+		src.Play();
 	}
 }

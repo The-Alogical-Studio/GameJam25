@@ -9,6 +9,11 @@ public class MenuLister : MonoBehaviour
 	[SerializeField] private GameObject saveLoad;
 	public byte flag;
 
+	void Awake(){
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
+	}
+
 	void Update(){
 		if(Input.GetKeyDown(KeyCode.Escape)){
 			if((flag & 1) == 1){

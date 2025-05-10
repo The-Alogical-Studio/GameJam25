@@ -339,9 +339,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 84
+    - Class: 82
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 84
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -864,7 +866,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c3b50e13b54496836144898285177fdb
+      Hash: a9a8447155113a8af3db33e15e6f2861
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MiniCamera
@@ -1002,7 +1004,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: ba8c7fab355579d677e9f27d0ae7421d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Awaker
@@ -1328,4 +1330,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/nicol/Desktop/Build1003d/GameJam25.exe
+  playerPath: C:/Users/nicol/Desktop/Build1003e/GameJam25.exe
